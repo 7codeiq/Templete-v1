@@ -1,0 +1,426 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Montserrat&display=swap');
+:root{
+    --primaryColor: #c11b1b;
+    --yellowColor: #ffbd5c;
+    --fontColor: #111;
+    --spanColor: #c0c0c0;
+    --greyColor: #f5f5f5;
+    --whiteColor: #ffff;
+    --MontserratFont: 'Montserrat', sans-serif;
+    --AbrilFont: 'Abril Fatface', cursive;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    font-family: var(--MontserratFont);
+}
+.header{
+    background: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../img/background\ 8.jpg) no-repeat ;
+    width: 100%;
+    height: 100vh;
+    background-attachment: fixed;
+}
+.navbar-mobile{
+    display: none;
+}
+#menu{
+    display: none;
+}
+.navigiton{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1% 7%;
+    width: 100%;
+}
+.navigiton .logo img{
+    width: 250px;
+}
+.navigiton .list-menu{
+    list-style: none;
+}
+.navigiton .list-menu li{
+    display: inline-block;
+    margin-right: 20px;
+}
+.navigiton .list-menu li a{
+    text-decoration: none;
+    color: var(--greyColor);
+    font-size: 18px;
+    text-transform: capitalize;
+    transition: all 0.3s ease-in-out;
+}
+.navigiton .list-menu li a:hover{
+    color: var(--primaryColor);
+    border-bottom: 1px solid var(--greyColor);
+    padding: 10px;
+}
+.bx-menu-alt-right{
+    display: none;
+}
+.home{
+    text-align: center;
+    color: var(--greyColor);
+    margin-top: 40vh;
+    line-height: 2.5;
+}
+.home h1{
+    font-size: 40px;
+    text-transform: capitalize;
+}
+.home h1 span{
+    color: var(--primaryColor);
+    font-family: var(--AbrilFont);
+}
+.home p{
+    font-size: 24px;
+    text-transform: capitalize;
+}
+.btn{
+    background: var(--primaryColor);
+    color: var(--greyColor);
+    padding: 10px 30px;
+    border-radius: 20px;
+    line-height: 5;
+    transition: all 0.3s ease-in-out;
+    font-size: 18px;
+}
+.btn:hover{
+    background: var(--greyColor);
+    color: #000;
+}
+/* Mobile menu */
+
+
+.active{
+    display: block;
+}
+.btn-bg{
+    padding: 5px;
+}
+.up-line{
+    background-color: #fff;
+    width: 20px;
+    padding: 2px 0px 0px 0px;
+    margin: 5px 0px;
+}
+.line{
+    background-color: #fff;
+    padding: 1px 20px;
+    margin: 5px 0px;
+}
+.down-line{
+    background-color: #fff;
+    width: 40px;
+    padding: 2px 0px 0px 0px;
+    margin: 5px 0px;
+}
+.up-line-active{
+    background-color: #fff;
+    width: 50px;
+    padding: 2px 0px 0px 0px;
+    margin: 0px 0px;
+    transform: rotate(45deg)
+}
+.line-active{
+    display: none; 
+}
+.down-line-active{
+    background-color: #fff;
+    padding: 1px 20px;
+    margin: 0px 0px;
+    transform: rotate(-45deg)
+}
+
+/* services */
+
+.services{
+    padding:8% 7%;
+}
+.services-items{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    gap: 1.5rem;
+}
+.item{
+    padding: 20px 50px;
+    text-align: center;
+    background: var(--greyColor);
+    line-height: 1.5;
+}
+.item i{
+    font-size: 60px;
+    color: var(--primaryColor);
+}
+.item h4{
+    font-size: 24px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+
+/* About */
+.About{
+    width: 100%;
+    height: 60vh;
+    background:  linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)), url(../img/banner.png) no-repeat center;
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.about-img img{
+    width: 15vw;
+}
+.about-text{
+    text-align: center;
+    color: #f5f5f5;
+    line-height: 2;
+}
+.about-text h1{
+    font-size: 40px
+}
+.about-text h1 span{
+    color: var(--primaryColor);
+}
+.about-text p{
+    width: 40vw;
+}
+
+/* Portfolio */
+.portfolio{
+    padding: 2% 7%;
+    margin-top: 50px;
+}
+.heading-title{
+    text-align: center;
+    line-height: 1.7;
+    margin: 50px 0;
+}
+.heading-title h4{
+    color: var(--primaryColor);
+    font-size: 20px;
+}
+.heading-title h1{
+    font-size: 40px;
+}
+.card-items{
+    width: 100%;
+    height: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+    grid: 1.5rem;
+    
+}
+.card-item{
+    text-align: center;
+    background: var(--greyColor);
+    margin: 20px 30px;
+    padding: 30px;
+    border-radius: 15px;
+}
+.card-item h1{
+    margin: 15px 0;
+    font-size: 30px
+}
+
+/* contact*/
+
+.contact{
+    padding: 2% 7%;
+    width: 100%;
+    height: auto;
+    background: url(../img/background\ 5.jpg) no-repeat center;
+    background-size: cover;
+}
+.contact-input{
+    text-align: center;
+}
+.contact-input form label{
+
+    font-size: 15px;
+    text-align: left;
+}
+.contact-input form input{
+    display:block;
+    margin: 10px auto;
+    padding: 20px 20vw ;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #f7f7f7;
+}
+.contact-input form textarea{
+    padding: 70px 20vw ;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    background: #f7f7f7;
+}
+.contact-input form button{
+    display: block;
+    width: 220px;
+    height: 50px;
+    margin: 20px auto;
+    background-color: var(--primaryColor);
+    border: none;
+    outline: none;
+    color: var(--greyColor);
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+}
+.contact-input form button:hover{
+    background: var(--greyColor);
+    color: var(--fontColor)
+}
+
+/* Footer */
+.footer{
+    margin: 80px 0 10px;
+    text-align: center;
+}
+.footer a{
+    text-decoration: none;
+    color: #999;
+    font-size: 22px;
+    margin: 0 10px;
+}
+.footer hr{
+    background: #999;
+    height: 1px;
+    width: 100%;
+    border: 0;
+    margin: 20px 0;
+}
+.footer p {
+    padding-bottom: 15px;
+}
+
+
+@media only screen and (max-width: 917px){
+    .navigiton .list-menu li {
+        margin-right: 10px;
+    }
+    .navigiton .logo img{
+        width: 170px;
+    }
+    .navigiton .list-menu li a{
+        font-size: 16px;
+    }
+    .about-img img {
+        width: 25vw;
+    }
+    .about-text h1 {
+        font-size: 26px;
+    }
+    .navbar-mobile{
+        position: absolute;
+        top: 0;
+        height: 100vh;
+        right: 0;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.918);
+        padding: 70px;
+    }
+    .navbar-mobile ul li{
+        list-style: none;
+        padding: 10px;
+    }
+    .navbar-mobile ul li a{
+        color: #fff;
+        text-decoration: none;
+        font-size: 20px;
+    }
+    .navbar-mobile ul li button{
+        background-color: yellow;
+        border-radius: 15px;
+        border: none;
+        margin-top: 70px;
+        padding: 10px;
+    }
+    .navbar-mobile ul li button a{
+        color: #000;
+    }
+    
+
+}
+
+@media only screen and (max-width:768px){
+    #menu{
+        z-index: 1;
+        display: block;
+        cursor: pointer;
+    }
+    .active{
+        display: block;
+    }
+    .btn-bg{
+        padding: 5px;
+    }
+    .up-line{
+        background-color: #fff;
+        width: 20px;
+        padding: 2px 0px 0px 0px;
+        margin: 5px 0px;
+    }
+    .line{
+        background-color: #fff;
+        padding: 1px 20px;
+        margin: 5px 0px;
+    }
+    .down-line{
+        background-color: #fff;
+        width: 40px;
+        padding: 2px 0px 0px 0px;
+        margin: 5px 0px;
+    }
+    .up-line-active{
+        background-color: #fff;
+        width: 50px;
+        padding: 2px 0px 0px 0px;
+        margin: 0px 0px;
+        transform: rotate(45deg)
+    }
+    .line-active{
+        display: none; 
+    }
+    .down-line-active{
+        background-color: #fff;
+        padding: 1px 20px;
+        margin: 0px 0px;
+        transform: rotate(-45deg)
+    }
+    .bx-menu-alt-right{
+        display: block;
+        color: var(--greyColor);
+        font-size: 35px;
+    }
+    .navigiton .list-menu{
+        display: none;
+    }
+    .home h1{
+        font-size: 25px;
+    }
+    .home p{
+        font-size: 16px;
+    }
+    .services-items{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    .card-items{
+        grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    }
+    .about-text p {
+        width: 100%;
+        font-size: 12px
+    }
+    .about-text h1 {
+        font-size: 17px;
+    }
+}
